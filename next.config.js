@@ -1,16 +1,6 @@
 /*
  * @Author: jweboy
- * @Date: 2019-12-02 13:10:27
+ * @Date: 2019-12-03 10:29:08
  * @LastEditors: jweboy
- * @LastEditTime: 2019-12-02 13:26:28
+ * @LastEditTime: 2019-12-03 10:33:41
  */
-const withLess = require('@zeit/next-less');
-
-module.exports = withLess({
-  // cssModules: true,
-  // cssLoaderOptions: {
-  //   importLoaders: 1,
-  //   localIdentName: "[local]___[hash:base64:5]",
-  // },
-  // localsConvention: 'camelCase',
-})

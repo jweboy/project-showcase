@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import { Button, Box, Dialog } from '@material-ui/core'
-// import './index.less';
+/*
+ * @Author: jweboy
+ * @Date: 2019-12-03 10:29:08
+ * @LastEditors: jweboy
+ * @LastEditTime: 2019-12-03 12:01:04
+ */
+import React, { useState, Fragment } from 'react';
+import Link from 'next/link';
+import { Button, Box, Dialog } from '@material-ui/core';
 
 // http://www.limijiaoyin.com/#/
 // https://nextjs.org/
@@ -16,17 +20,17 @@ function Home() {
     setVisible(true);
   }
 
-  function handleCloseModal() { 
+  function handleCloseModal() {
     setVisible(false);
   }
 
   return (
-    <div>
+    <Fragment>
       <Box>
         <span>background</span>
       </Box>
-      <Box position="absolute" bottom="0" display="flex" justifyContent="center" width="100%" paddingTop={1} paddingBottom={1}>
-        <Box margin-left={2}>
+      <Box position="absolute" bottom="0" display="flex" alignItems="center" width="100%" flexDirection="column" paddingTop={2} paddingBottom={2}>
+        <Box width="100%" textAlign="center" marginBottom={1}>
           <Box marginLeft={1} display="inline">
             <Button className="btn" variant="contained" color="primary" size="large" onClick={handleOpenModal}>我有需求</Button>
           </Box>
@@ -36,29 +40,13 @@ function Home() {
             </Link>
           </Box>
         </Box>
-        {/* <p>备案号</p> */}
+        <Box>备案号XXXXX</Box>
       </Box>
       <Dialog open={visible} onBackdropClick={handleCloseModal}>
         <Box padding={2} width={278} height={278}>二维码</Box>
       </Dialog>
-      <style global jsx>
-        {
-          `
-          body {
-            margin: 0;
-            padding: 0;
-          }
-          `
-        }
-      </style>
-      <style jsx>
-        {
-          `
-          `
-        }
-      </style>
-    </div>
-  )
+    </Fragment>
+  );
 }
 
-export default Home
+export default Home;
